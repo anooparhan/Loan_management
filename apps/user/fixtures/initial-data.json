@@ -1,0 +1,103 @@
+[  
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_837_835_file_upload",
+      "name":"Upload files",
+      "content_type":4,
+      "label": "837 / 835 File Management",
+      "sub_label": "View"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_837_835_import_csv",
+      "name":"CSV Import",
+      "content_type":4,
+      "label": "837 / 835 File Management",
+      "sub_label": "Manage"
+      
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_837_835_import",
+      "name":"837 / 835 Import",
+      "content_type":4,
+      "label": "837 / 835 File Management",
+      "sub_label": "Manage"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_report_module",
+      "name":"Reports",
+      "content_type":4,
+      "label": "Reports Management",
+      "sub_label": "View"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_claim_module",
+      "name":"Claims",
+      "content_type":4,
+      "label": "Reports Management",
+      "sub_label": "View"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_db_drop",
+      "name":"Access Drop DB",
+      "content_type":4,
+      "label": "Super Admin Management",
+      "sub_label": "Manage"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_user_management_module",
+      "name":"Access User Management",
+      "content_type":4,
+      "label": "User Management",
+      "sub_label": "View"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_user_role_module",
+      "name":"Roles",
+      "content_type":4,
+      "label": "User Management",
+      "sub_label": "View"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_user_group_module",
+      "name":"Groups",
+      "content_type":4,
+      "label": "User Management",
+      "sub_label": "View"
+    }
+  },
+  {
+    "model": "auth.Permission",
+    "fields": {
+      "codename":"access_user_module",
+      "name":"Users",
+      "content_type":4,
+      "label": "User Management",
+      "sub_label": "View"
+    }
+  }
+]
