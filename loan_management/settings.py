@@ -53,7 +53,8 @@ SECRET_KEY = 'django-insecure-j#8^85q0a@k1ju+nc^_nzm3^t#=a6t)7w5#)5-1@hdu7wcvo2g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['loan-management-jx1a.onrender.com', '127.0.0.1', 'localhost']
+
 
 
 # Application definition
@@ -145,17 +146,30 @@ REST_FRAMEWORK = {
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'management',
+#         'HOST':'localhost',
+#         'PORT':'5432',
+#         'USER':'postgres',
+#         'PASSWORD':'1234'
+#     } 
+# }
+DATABASE_URL = os.getenv("DATABASE_URL")
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG") == "True"
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'management',
-        'HOST':'localhost',
-        'PORT':'5432',
-        'USER':'postgres',
-        'PASSWORD':'1234'
-    } 
+        'NAME': DATABASE_URL.split('/')[-1],
+        'USER': DATABASE_URL.split('//')[1].split(':')[0],
+        'PASSWORD': DATABASE_URL.split(':')[2].split('@')[0],
+        'HOST': DATABASE_URL.split('@')[1].split(':')[0],
+        'PORT': DATABASE_URL.split(':')[-1],
+    }
 }
-
 SIMPLE_JWT = {
     # 'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=2),
     'ACCESS_TOKEN_LIFETIME': datetime.timedelta(days=20),
